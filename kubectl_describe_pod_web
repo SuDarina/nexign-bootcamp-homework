@@ -1,0 +1,103 @@
+Name:         web-4vp54
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.49.2
+Start Time:   Thu, 16 Jun 2022 19:24:49 +0300
+Labels:       app=web
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.4
+IPs:
+  IP:           172.17.0.4
+Controlled By:  ReplicaSet/web
+Containers:
+  web:
+    Container ID:   docker://bc5b4cc5853fb8b63f62adc1c807f02d722de40d7e0b68fac644aabbb1e74e18
+    Image:          dordidora/web:1.0.0
+    Image ID:       docker-pullable://dordidora/web@sha256:fe31878074a2f8cd7a9f4809e8dc8b04e1a8e29f63dfc0364717387048c66f79
+    Port:           8000/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Thu, 16 Jun 2022 19:25:05 +0300
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-pgzp8 (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  kube-api-access-pgzp8:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  85s   default-scheduler  Successfully assigned default/web-4vp54 to minikube
+  Normal  Pulling    84s   kubelet            Pulling image "dordidora/web:1.0.0"
+  Normal  Pulled     70s   kubelet            Successfully pulled image "dordidora/web:1.0.0" in 13.465975772s
+  Normal  Created    70s   kubelet            Created container web
+  Normal  Started    69s   kubelet            Started container web
+
+Name:         web-tjqnl
+Namespace:    default
+Priority:     0
+Node:         minikube/192.168.49.2
+Start Time:   Thu, 16 Jun 2022 19:24:49 +0300
+Labels:       app=web
+Annotations:  <none>
+Status:       Running
+IP:           172.17.0.3
+IPs:
+  IP:           172.17.0.3
+Controlled By:  ReplicaSet/web
+Containers:
+  web:
+    Container ID:   docker://8dc178da795437c47d44ebbb493a052556716f688cd80495e4b9eed8844b9fc4
+    Image:          dordidora/web:1.0.0
+    Image ID:       docker-pullable://dordidora/web@sha256:fe31878074a2f8cd7a9f4809e8dc8b04e1a8e29f63dfc0364717387048c66f79
+    Port:           8000/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Thu, 16 Jun 2022 19:25:03 +0300
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-trc89 (ro)
+Conditions:
+  Type              Status
+  Initialized       True
+  Ready             True
+  ContainersReady   True
+  PodScheduled      True
+Volumes:
+  kube-api-access-trc89:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  86s   default-scheduler  Successfully assigned default/web-tjqnl to minikube
+  Normal  Pulling    85s   kubelet            Pulling image "dordidora/web:1.0.0"
+  Normal  Pulled     73s   kubelet            Successfully pulled image "dordidora/web:1.0.0" in 11.692766097s
+  Normal  Created    73s   kubelet            Created container web
+  Normal  Started    72s   kubelet            Started container web
